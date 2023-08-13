@@ -1,10 +1,10 @@
 Status: Optimal
 Optimal Solution:
-Number of workers in group X1: 5.0
-Number of workers in group X2: 5.0
-Number of workers in group Y1: 1.0
-Number of workers in group Y2: 6.0
-Number of workers in group Y3: 3.0
-Number of workers in group Y4: 2.0
-Number of workers in group Y5: 2.0
+Number of workers in group X1: 5
+Number of workers in group X2: 5
+Number of workers in group Y1: 1
+Number of workers in group Y2: 6
+Number of workers in group Y3: 3
+Number of workers in group Y4: 2
+Number of workers in group Y5: 2
 Total Cost: £ 1696.0
