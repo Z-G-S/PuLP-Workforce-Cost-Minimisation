@@ -79,3 +79,7 @@ The non-negativity constraint ensures that the decision variables are greater th
 ######
 
 # Optimal solution
+
+**Decison variable optimal values**
+
+**Objective function optimal value**
