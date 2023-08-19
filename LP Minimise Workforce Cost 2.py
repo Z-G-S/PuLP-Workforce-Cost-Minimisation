@@ -1,7 +1,7 @@
 import pulp
 import pandas as pd 
 
-#Create a linear programming problem
+#Create a integer linear programming problem
 problem = pulp.LpProblem("LP_Minimise_Workforce_Cost", pulp.LpMinimize)
 
 #Define decision variables: Name, Non-negativity, Integer
@@ -38,7 +38,7 @@ problem += X1-X2 >= 0, "BC1"
 problem += X1-X2 <= 1, "BC2"
 problem += X1>=X2, "BC3"
 
-#Solve the linear program
+#Solve the integer linear program
 problem.solve()
 
 #Print results
@@ -57,6 +57,7 @@ print() #blank line
 print(f"Minimum workforce cost: £{pulp.value(workforce_cost)}")
 print() #blank line
 
+#Calculation and printing of workforce cost breakdown
 print("Workforce cost breakdown:")
 print() #blank line
 Cost_coefficients = [80, 80, 64, 64, 64, 64, 64, 64]
@@ -70,7 +71,7 @@ for Cost_coefficients, Variable_values, Variable_names in zip(Cost_coefficients,
 print(f"Total cost:       £{Total_cost}")
 print() #blank line
 
-#Workers and capacity per hour
+#Calculation and printing of workers and capacity per hour
 print("Number of workers and capacity of patients for each hour:")
 print() #blank line
 removed_constraints = ["Max_full_time", "Min_full_time", "Max_part_time", "BC1", "BC2", "BC3"]
@@ -81,9 +82,9 @@ for name, constraint in problem.constraints.items():
         print(f"{name}:")
         print(f"Number of workers: {int(NumOfWorkers)}")
         print(f"Capacity of patients: {int(Capacity)}")
-        print()  # Blank line
+print() #blank line
 
-o = [{'name':name, 'shadow price':c.pi, 'slack': c.slack}
+#Sensitivity analysis 
+o = [{'Name': name, 'Slack': abs(c.slack), 'Status': 'Binding' if abs(c.slack) == 0 else ' Not Binding'}
 for name, c in problem.constraints.items()]
 print(pd.DataFrame(o))
-df = pd.DataFrame(o)
