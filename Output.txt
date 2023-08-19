@@ -2,13 +2,13 @@ Status: Optimal
 
 Optimal Solution:
 
-Group_X1 = 5
-Group_X2 = 5
-Group_Y1 = 1
-Group_Y2 = 6
-Group_Y3 = 3
-Group_Y4 = 2
-Group_Y5 = 2
+Number of workers in Group_X1 = 5
+Number of workers in Group_X2 = 5
+Number of workers in Group_Y1 = 1
+Number of workers in Group_Y2 = 6
+Number of workers in Group_Y3 = 3
+Number of workers in Group_Y4 = 2
+Number of workers in Group_Y5 = 2
 
 Minimum workforce cost: £1696.0
 
@@ -28,24 +28,31 @@ Number of workers and capacity of patients for each hour:
 9am_10am:
 Number of workers: 11
 Capacity of patients: 55
+
 10am_11am:
 Number of workers: 17
 Capacity of patients: 85
+
 11am_12pm:
 Number of workers: 20
 Capacity of patients: 100
+
 12pm_1pm:
 Number of workers: 17
 Capacity of patients: 85
+
 1pm_2pm:
 Number of workers: 18
 Capacity of patients: 90
+
 2pm_3pm:
 Number of workers: 17
 Capacity of patients: 85
+
 3pm_4pm:
 Number of workers: 14
 Capacity of patients: 70
+
 4pm_5pm:
 Number of workers: 12
 Capacity of patients: 60
