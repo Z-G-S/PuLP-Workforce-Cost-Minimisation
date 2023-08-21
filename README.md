@@ -132,7 +132,7 @@ The model is extended to create a timetable, showing the number of workers per h
 ######
 **Slack and binding status**
 ######
-The model also incorporates the slack and binding status for each constraint. Slack refers to an additional variable used in the algorithm and inequality equations that represents how much room there is before the constraint becomes "binding". A binding constraint refers to a constraint with a slack value of 0.0 that forms the feasible region. In the healthcare call centre case study, for the demand constraints, slack refers to the additional capacity over the right hand side of the equation. More specifically, in the hour 9am-10am, the demand constraint requires there be a capacity of at least "45" and through the optimal solution we see that the capacity for this hour is 55 patients and thus, the slack variable has a value of "10.0".
+The model also incorporates the slack and binding status for each constraint. Slack refers to an additional variable used in the algorithm and inequality equations that represents how much room there is before the constraint becomes "binding". A binding constraint refers to a constraint with a slack value of 0.0 that forms the feasible region. In the healthcare call centre case study, for the demand constraints, slack refers to the additional capacity over the right hand side of the equation. More specifically, in the hour 9am-10am, the demand constraint requires there be a capacity of at least "45" and through the optimal solution we see that the capacity for this hour is 55 patients and thus, the slack variable has a value of "10.0" and has a binding status of "Not Binding".
 ######
 | Constraint name   | Slack | Status |
 | ------------- | ------------- |------------- |
