@@ -81,5 +81,72 @@ The non-negativity constraint ensures that the decision variables are greater th
 # Optimal solution
 
 **Decison variable optimal values**
+| Group   | No. of workers |
+| ------------- | ------------- |
+| X1  | 5  |
+| X2  | 5  |
+| Y1  | 1  |
+| Y2  | 6  |
+| Y3  | 3  |
+| Y4  | 2  |
+| Y5  | 2  |
+######
+The decision variable values show the optimum number of workers allocated to each group (shift) to minimise cost while satisfying all constraints.
 
 **Objective function optimal value**
+
+| Minimum workforce cost   |
+| ------------- |
+£1696.0
+######
+This value is the minimum workforce cost achieved when satisfying all constraints and is calculated by multiplying the cost coefficients in the objective function with the decision variable values.
+######
+**Workforce cost breakdown**
+| Group   | Cost |
+| ------------- | ------------- |
+| X1  | £400.0 |
+| X2  | £400.0  |
+| Y1  | £64.0  |
+| Y2  | £384.0  |
+| Y3  | £192.0 |
+| Y4  | £128.0  |
+| Y5  | £128.0  |
+######
+The table above breaksdown the workforce cost for each group. For example, X1's cost of £400.0 has been calculated by taking the cost coefficient in the objective function (£80) and multiplying it with the optimal value of X1 (5).
+######
+# Extended model
+**Workers and capacity per hour**
+######
+The model is extended to create a timetable, showing the number of workers per hour and capacity per hour. This is useful for the healthcare call centre as the model alone does not include this and the centre would need to know how many nurses are working at a point in time.
+######
+| Hour   | No. of workers | Capacity of patients |
+| ------------- | ------------- |------------- |
+| 9am-10am  | 11 | 55 |
+| 10am-11am  | 17  | 85  |
+| 11am-12pm  | 20  | 100  |
+| 12pm-1pm  | 17  | 85  |
+| 1pm-2pm  | 18 | 90  |
+| 2pm-3pm  | 17 | 85  |
+| 3pm-4pm  | 14  | 70  |
+| 4pm-5pm  | 12  | 60  |
+######
+**Slack and binding status**
+######
+The model also incorporates the slack and binding status for each constraint. Slack refers to an additional variable used in the algorithm and inequality equations that represent how much room there is before the constraint becomes "binding". A binding constraint refers to a constraint with a slack value of 0.0 that forms the feasible region. In the healthcare call centre case study, for the demand constraints, slack refers to the additional capacity over the right hand side of the equation. More specifically, in the hour 9am-10am, the demand constraint requires there be a capacity of at least "45" and through the optimal solution we see that the capacity for this hour is 55 patients and thus, the slack variable has a value of "10.0".
+######
+| Constraint name   | Slack | Status |
+| ------------- | ------------- |------------- |
+| 9am-10am  | 10.0 | 55 | Not Binding
+| 10am-11am  | 30.0  | 85  | Not Binding
+| 11am-12pm  | 30.0  | 100  | Not Binding
+| 12pm-1pm  | 0.0  | 85  | Binding
+| 1pm-2pm  | 2.0 | 90  | Not Binding
+| 2pm-3pm  | 1.0 | 85  | Not Binding
+| 3pm-4pm  | 0.0  | 70  | Binding
+| 4pm-5pm  | 0.0  | 60  | Binding
+| Max full-time  | 10.0 | 90  | Not Binding
+| Min full-time  | 6.0 | 85  | Not Binding
+| Max part-time  | 6.0  | 70  | Not Binding
+| BC1  | 12  | 0.0  | Binding
+| BC2  | 14  | 1.0  | Not Binding
+| BC3  | 12  | 0.0  | Binding
