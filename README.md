@@ -136,17 +136,17 @@ The model also incorporates the slack and binding status for each constraint. Sl
 ######
 | Constraint name   | Slack | Status |
 | ------------- | ------------- |------------- |
-| 9am-10am  | 10.0 | 55 | Not Binding
-| 10am-11am  | 30.0  | 85  | Not Binding
-| 11am-12pm  | 30.0  | 100  | Not Binding
-| 12pm-1pm  | 0.0  | 85  | Binding
-| 1pm-2pm  | 2.0 | 90  | Not Binding
-| 2pm-3pm  | 1.0 | 85  | Not Binding
-| 3pm-4pm  | 0.0  | 70  | Binding
-| 4pm-5pm  | 0.0  | 60  | Binding
-| Max full-time  | 10.0 | 90  | Not Binding
-| Min full-time  | 6.0 | 85  | Not Binding
-| Max part-time  | 6.0  | 70  | Not Binding
-| BC1  | 12  | 0.0  | Binding
-| BC2  | 14  | 1.0  | Not Binding
-| BC3  | 12  | 0.0  | Binding
+| 9am-10am  | 10.0 |  Not Binding
+| 10am-11am  | 30.0  |  Not Binding
+| 11am-12pm  | 30.0  |  Not Binding
+| 12pm-1pm  | 0.0  |  Binding
+| 1pm-2pm  | 2.0 |  Not Binding
+| 2pm-3pm  | 1.0 |  Not Binding
+| 3pm-4pm  | 0.0  |  Binding
+| 4pm-5pm  | 0.0  |  Binding
+| Max full-time  | 10.0 | Not Binding
+| Min full-time  | 6.0 | Not Binding
+| Max part-time  | 6.0  | Not Binding
+| BC1  | 0.0  | Binding
+| BC2  | 1.0  | Not Binding
+| BC3  | 0.0  | Binding
