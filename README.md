@@ -150,3 +150,5 @@ The model also incorporates the slack and binding status for each constraint. Sl
 | BC1  | 0.0  | Binding
 | BC2  | 1.0  | Not Binding
 | BC3  | 0.0  | Binding
+
+# Conclusion & Recommendation
